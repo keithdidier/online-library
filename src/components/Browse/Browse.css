@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+    background: #4e1e29;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+
+.books-container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background: #c6b38e;
+    width: 70%;
+    margin: auto;
+}
+
+.book-card {
+    background: #fbffe6;
+    width: 70%;
+    margin: auto;
+}
+
+.book-img {
+    width: 70px;
+    height: 70px;
+}
+
+.book-card:hover {
+    opacity: 0.8;
+}

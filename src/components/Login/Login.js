@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import './Login.css';
+
 
 export default class Login extends Component {
     render() {
         return(
             <section id="login-form">
-                <span>Username</span>
+                <div className="form">
+                <span className="form-words">Username</span>
                 <input type="text" name="username" value="required"/>
-                <span>Password</span>
+                <span className="form-words">Password</span>
                 <input type="text" name="psw" value="required"/>
                 <button type="submit">Register</button>
-                <Link to="/browse"><button type="submit">Login</button></Link>
+                <Link to="/browse"><button type="submit" className="login-btn">Login</button></Link>
+                </div>
             </section>
         )
     }
