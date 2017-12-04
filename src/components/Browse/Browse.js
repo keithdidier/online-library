@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getBooks} from '../../ducks/reducer';
+import './Browse.css';
 
 class Browse extends Component {
 
@@ -10,16 +11,18 @@ class Browse extends Component {
     }
 
     render() {
-        let {title, author, genre} = this.props.allBooks;
         return(
-            <section>
-          
-                    <div>
-                    <span>{title}</span>
-                    <span>{author}</span>
-                    <span>{genre}</span>
-                    </div>
-             
+            <section className="books-container">
+                {this.props.allBooks.map((book, index) => {
+                   return (
+                       <div className="book-card" key={index}>
+                            <span>{book.title}</span>
+                            <span>{book.author}</span>
+                            <span>{book.genre}</span>
+                            <p>{book.description}</p>
+                            <img src={book.img_url} className="book-img" alt="img" />
+                        </div>
+                )})}
             </section>
         )
     }

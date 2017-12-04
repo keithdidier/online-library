@@ -11,7 +11,6 @@ export default function reducer(state = initialState, action) {
         case ALL_BOOKS + "_FULFILLED":
             return Object.assign({}, state, {allBooks: action.payload});
 
-            return initialState;
         default: return state;
     }
 }

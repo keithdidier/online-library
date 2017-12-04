@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 massive(process.env.CONNECTION_STRING).then(db => {
     app.set('db', db);
+    console.log('db hooked up')
 })
 
 app.get('/api/books', books_controller.getBooks);
